@@ -68,7 +68,7 @@ var topics = ["Lemmy Kilmister", "Jimmy Page", "Jim Morrison", "Tobias Forge", "
   displayButtons();
 
 
-  $(document).on("click", "#musician", displaymusician);
+  $(document).on('click', '#show', displaymusician);
 
  
   $(document).on("click", ".musicianGiphy", pausePlayGifs);
@@ -82,7 +82,7 @@ var topics = ["Lemmy Kilmister", "Jimmy Page", "Jim Morrison", "Tobias Forge", "
       } else {
         $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still");
-        
+
   }
 }
 
