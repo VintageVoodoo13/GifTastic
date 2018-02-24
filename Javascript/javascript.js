@@ -24,8 +24,9 @@ var topics = ["Lemmy Kilmister", "Jimmy Page", "Jim Morrison", "Tobias Forge", "
             var rating = results[i].rating;
             var defaultAnimatedSrc = results[i].images.fixed_height.url;
             var staticSrc = results[i].images.fixed_height_still.url;
-            var musicianImage = $("<img>");
+            var showImage = $("<img>");
             var p = $("<p>").text("Rating: " + rating);
+            var showDiv = $('#gifArea');
 
             showImage.attr("src", staticSrc);
             showImage.addClass("musicianGiphy");
@@ -33,7 +34,7 @@ var topics = ["Lemmy Kilmister", "Jimmy Page", "Jim Morrison", "Tobias Forge", "
             showImage.attr("data-still", staticSrc);
             showImage.attr("data-animate", defaultAnimatedSrc);
             showDiv.append(p);
-            showDiv.append(musicianImage);
+            showDiv.append(showImage);
             $("#gifArea").prepend(musicianDiv);
 
         }
@@ -81,6 +82,7 @@ var topics = ["Lemmy Kilmister", "Jimmy Page", "Jim Morrison", "Tobias Forge", "
       } else {
         $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still");
+        
   }
 }
 
